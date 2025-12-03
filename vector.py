@@ -1,11 +1,9 @@
-import kagglehub
-from kagglehub import KaggleDatasetAdapter
+import os
+
 import pandas as pd
-from langchain_ollama import OllamaEmbeddings
 from langchain_chroma import Chroma
 from langchain_core.documents import Document
-
-import os
+from langchain_ollama import OllamaEmbeddings
 
 df = pd.read_csv("Amazon_Unlocked_Mobile.csv")
 embeddings = OllamaEmbeddings(model="mxbai-embed-large")
